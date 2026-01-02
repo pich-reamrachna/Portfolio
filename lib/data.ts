@@ -13,14 +13,13 @@ export const heroLinks = [
 ];
 
 export const avatar = [
-    { label: "profile",icon: "CAT", href: "#top" }
+    { label: "profile", icon: "/images/nvBj-vz0.jpg", href: "#top", isImage: true },
 ];
 
 export const sideLinks = [
-  { label: "hero", icon: "HO", href: "#top" },
   { label: "projects", icon: "PRJ", href: "#projects" },
   { label: "tech", icon: "TEC", href: "#tech" },
   { label: "experience", icon: "EXP", href: "#experience" },
   { label: "certs", icon: "CER", href: "#certs" },
-  { label: "contact", icon: "MAIL", href: "#contact" },
+  { label: "contact", icon: "/icons/email-envelope-white-icon.svg", href: "#contact", isImage: true },
 ];
