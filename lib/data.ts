@@ -12,8 +12,12 @@ export const heroLinks = [
   { label: "@email", href: "mailto:hello@example.com" },
 ];
 
+export const avatar = [
+    { label: "profile",icon: "CAT", href: "#top" }
+];
+
 export const sideLinks = [
-  { label: "avatar", icon: "CAT", href: "#top" },
+  { label: "hero", icon: "HO", href: "#top" },
   { label: "projects", icon: "PRJ", href: "#projects" },
   { label: "tech", icon: "TEC", href: "#tech" },
   { label: "experience", icon: "EXP", href: "#experience" },

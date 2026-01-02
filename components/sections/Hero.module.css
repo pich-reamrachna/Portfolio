@@ -1,0 +1,125 @@
+.hero {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.terminalWrap {
+  max-width: 880px;
+}
+
+.terminalTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: "IBM Plex Mono", "Space Mono", monospace;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.chevron {
+  font-size: 1.4rem;
+  color: #f5f2f4;
+}
+
+.terminal {
+  border-radius: 14px;
+  padding: 2rem 2.25rem 1.5rem;
+  background: var(--terminal-bg);
+  border: 1px solid var(--terminal-border);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.terminalBody {
+  font-family: "IBM Plex Mono", "Space Mono", monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #f5eef6;
+  min-height: 220px;
+}
+
+.terminalLine {
+  margin: 0 0 0.5rem;
+}
+
+.terminalPrompt {
+  margin-top: 1.25rem;
+  font-family: "IBM Plex Mono", "Space Mono", monospace;
+  font-size: 0.95rem;
+}
+
+.promptUser {
+  color: #f6d11e;
+}
+
+.promptSep,
+.promptHost {
+  color: #e5e1e7;
+}
+
+.promptPath {
+  color: #f1e8f1;
+  margin-left: 0.25rem;
+}
+
+.heroLinks {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.6rem;
+  border-radius: 12px;
+  background: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  color: #eae7f1;
+  text-decoration: none;
+  font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.pill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212, 90, 168, 0.7);
+}
+
+.pillPrimary {
+  background: rgba(24, 10, 20, 0.75);
+  border-color: rgba(212, 90, 168, 0.55);
+}
+
+.pillArrow {
+  font-size: 1.1rem;
+  color: #f0e9f2;
+}
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .terminal {
+    padding: 1.5rem;
+  }
+
+  .terminalBody {
+    min-height: 180px;
+  }
+}

@@ -1,41 +1,42 @@
 import { heroLinks, terminalLines } from "../../lib/data";
+import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
     <>
-      <section className="hero">
-        <div className="terminal-wrap">
-          <div className="terminal-title">
-            <span className="chevron">{">"}</span>
+      <section className={styles.hero}>
+        <div className={styles.terminalWrap}>
+          <div className={styles.terminalTitle}>
+            <span className={styles.chevron}>{">"}</span>
             <span>Terminal</span>
           </div>
 
-          <div className="terminal">
-            <div className="terminal-body">
+          <div className={styles.terminal}>
+            <div className={styles.terminalBody}>
               {terminalLines.map((line) => (
-                <p key={line} className="terminal-line">
+                <p key={line} className={styles.terminalLine}>
                   {line}
                 </p>
               ))}
             </div>
-            <div className="terminal-prompt">
-              <span className="prompt-user">visitor@rachna</span>
-              <span className="prompt-sep">.</span>
-              <span className="prompt-host">portfolio</span>
-              <span className="prompt-path">:~$</span>
+            <div className={styles.terminalPrompt}>
+              <span className={styles.promptUser}>visitor@rachna</span>
+              <span className={styles.promptSep}>.</span>
+              <span className={styles.promptHost}>portfolio</span>
+              <span className={styles.promptPath}>:~$</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="hero-links">
-        <a className="pill primary" href={heroLinks[0].href}>
+      <section className={styles.heroLinks}>
+        <a className={`${styles.pill} ${styles.pillPrimary}`} href={heroLinks[0].href}>
           {heroLinks[0].label}
         </a>
         {heroLinks.slice(1).map((item) => (
-          <a key={item.label} className="pill" href={item.href}>
+          <a key={item.label} className={styles.pill} href={item.href}>
             <span>{item.label}</span>
-            <span className="pill-arrow">{">"}</span>
+            <span className={styles.pillArrow}>{">"}</span>
           </a>
         ))}
       </section>
