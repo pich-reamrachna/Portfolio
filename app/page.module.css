@@ -2,7 +2,6 @@
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-  padding: 5rem 6vw 4rem;
 }
 
 .backdrop {
@@ -12,6 +11,7 @@
     radial-gradient(circle at 80% 5%, rgba(70, 20, 60, 0.35), transparent 45%),
     linear-gradient(160deg, rgba(14, 6, 16, 0.95), rgba(9, 4, 10, 0.9));
   z-index: 0;
+  pointer-events: none;
 }
 
 .matrix {
@@ -23,10 +23,30 @@
   filter: blur(0.2px);
   z-index: 1;
   mask-image: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.75) 30%, rgba(0, 0, 0, 1) 65%);
+  pointer-events: none;
 }
 
+.snapContainer {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+  scrollbar-color: rgb(0, 0, 0) transparent;
+}
+
+.snapSection {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  padding: 5rem 6vw 4rem;
+}
+
+
 @media (max-width: 900px) {
-  .page {
+  .snapSection {
     padding: 4rem 1.5rem 3rem;
   }
 }
