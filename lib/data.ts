@@ -5,11 +5,12 @@ export const terminalLines = [
 ];
 
 export const heroLinks = [
+  { label: "Download CV", icon: "/icons/download-2-128.ico", isImage: true, href: "/cv.pdf" },
   { label: "Contact me", href: "#contact" },
   { label: "@facebook", href: "https://facebook.com" },
   { label: "@instagram", href: "https://instagram.com" },
   { label: "@linkedin", href: "https://linkedin.com" },
-  { label: "@email", href: "mailto:hello@example.com" },
+  { label: "@github", href: "https://github.com" },
 ];
 
 export const avatar = [

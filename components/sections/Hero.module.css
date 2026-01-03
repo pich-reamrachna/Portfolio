@@ -119,6 +119,13 @@
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   transition: transform 160ms ease, border-color 160ms ease;
+  user-select: none;
+}
+
+.pillIcon {
+  width: 15px;
+  height: 15px;
+  opacity: 80%;
 }
 
 .pill:hover {

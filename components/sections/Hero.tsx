@@ -108,9 +108,23 @@ export default function Hero() {
       <section className={styles.heroLinks}>
         <a className={`${styles.pill} ${styles.pillPrimary}`} href={heroLinks[0].href}>
           {heroLinks[0].label}
+          {heroLinks[0].isImage ? (
+            <img
+              src={heroLinks[0].icon}
+              alt=""
+              className={styles.pillIcon}
+              aria-hidden="true"
+            />
+          ) : null}
         </a>
-        {heroLinks.slice(1).map((item) => (
+        <a className={`${styles.pill} ${styles.pillPrimary}`} href={heroLinks[1].href}>
+          {heroLinks[1].label}
+        </a>
+        {heroLinks.slice(2).map((item) => (
           <a key={item.label} className={styles.pill} href={item.href}>
+            {item.isImage ? (
+              <img src={item.icon} alt="" className={styles.pillIcon} aria-hidden="true" />
+            ) : null}
             <span>{item.label}</span>
             <span className={styles.pillArrow}>{">"}</span>
           </a>
