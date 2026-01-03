@@ -1,7 +1,69 @@
+"use client";
+
+import { useEffect, useMemo, useRef, useState } from "react";
 import { heroLinks, terminalLines } from "../../lib/data";
 import styles from "./Hero.module.css";
 
+const COMMANDS: Record<string, string[]> = {
+  help: [
+    "Available commands:",
+    "- help: show this list",
+    "- about: short intro",
+    "- projects: project hint",
+    "- clear: clear the terminal",
+  ],
+  about: [
+    "Hi, I'm Rachna.",
+    "I build thoughtful web experiences with clean UI and playful details.",
+  ],
+  projects: ["Check the Projects section below or type `open projects` soon."],
+};
+
 export default function Hero() {
+  const [output, setOutput] = useState<string[]>(terminalLines);
+  const [input, setInput] = useState("");
+  const terminalRef = useRef<HTMLDivElement | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
+
+  const prompt = useMemo(() => "visitor@rachna.portfolio:~$", []);
+
+  useEffect(() => {
+    inputRef.current?.focus();
+  }, []);
+
+  useEffect(() => {
+    terminalRef.current?.scrollTo({
+      top: terminalRef.current.scrollHeight,
+      behavior: "smooth",
+    });
+  }, [output]);
+
+  const runCommand = (raw: string) => {
+    const command = raw.trim().toLowerCase();
+    if (!command) {
+      return;
+    }
+
+    if (command === "clear") {
+      setOutput([]);
+      return;
+    }
+
+    const response = COMMANDS[command] ?? [`Command not found: ${command}`];
+    setOutput((prev) => [...prev, `${prompt} ${raw}`, ...response]);
+  };
+
+  const handleSubmit = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key !== "Enter") {
+      return;
+    }
+
+    event.preventDefault();
+    const current = input;
+    setInput("");
+    runCommand(current);
+  };
+
   return (
     <>
       <section className={styles.hero}>
@@ -11,10 +73,14 @@ export default function Hero() {
             <span>Terminal</span>
           </div>
 
-          <div className={styles.terminal}>
-            <div className={styles.terminalBody}>
-              {terminalLines.map((line) => (
-                <p key={line} className={styles.terminalLine}>
+          <div
+            className={styles.terminal}
+            onClick={() => inputRef.current?.focus()}
+            role="presentation"
+          >
+            <div className={styles.terminalBody} ref={terminalRef}>
+              {output.map((line, index) => (
+                <p key={`${line}-${index}`} className={styles.terminalLine}>
                   {line}
                 </p>
               ))}
@@ -24,6 +90,16 @@ export default function Hero() {
               <span className={styles.promptSep}>.</span>
               <span className={styles.promptHost}>portfolio</span>
               <span className={styles.promptPath}>:~$</span>
+              <span className={styles.promptInputWrap}>
+                <input
+                  ref={inputRef}
+                  className={styles.promptInput}
+                  value={input}
+                  onChange={(event) => setInput(event.target.value)}
+                  onKeyDown={handleSubmit}
+                  spellCheck={false}
+                />
+              </span>
             </div>
           </div>
         </div>
