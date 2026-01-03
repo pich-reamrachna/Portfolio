@@ -38,6 +38,11 @@
   border-color: rgba(212, 90, 168, 0.6);
 }
 
+.avatar[aria-current="true"] {
+  border-color: rgba(212, 90, 168, 0.6);
+  background-color: rgb(199, 18, 115);
+}
+
 .avatarImage {
   width: 48px;
   height: 48px;
