@@ -8,7 +8,7 @@
 }
 
 .terminalWrap {
-  max-width: 880px;
+  max-width: 900px;
 }
 
 .terminalTitle {
@@ -33,6 +33,7 @@
   border: 1px solid var(--terminal-border);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(6px);
+  opacity: 70%;
 }
 
 .terminalBody {
@@ -115,8 +116,8 @@
   border: 1px solid var(--pill-border);
   color: #eae7f1;
   text-decoration: none;
-  font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
-  font-size: 0.95rem;
+  font-family: "IBM Plex Mono", "Space Mono", monospace;
+  font-size: 0.87rem;
   letter-spacing: 0.02em;
   transition: transform 160ms ease, border-color 160ms ease;
   user-select: none;

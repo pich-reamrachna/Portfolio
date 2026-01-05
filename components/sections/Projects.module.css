@@ -1,0 +1,102 @@
+.projectContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.projectsWrap {
+  max-width: 900px;
+}
+
+.projectTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: "IBM Plex Mono", "Space Mono", monospace;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.2rem;
+  user-select: none;
+}
+
+.projectContainer {
+  /* padding: 2rem 2.25rem 1.5rem; */
+  /* background: var(--terminal-bg); */
+  /* border: 1px solid var(--terminal-border); */
+  /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35); */
+  backdrop-filter: blur(6px);
+  min-height: 460px;
+  user-select: none;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:15px;
+}
+
+.Project {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  /* padding: 20px; */
+  color: #fff;
+  font-family: "IBM Plex Mono", "Space Mono", monospace;
+  font-size: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  font-size: 0.95rem;
+  
+}
+
+.Project {
+    transition: transform 300ms ease, border-color 300ms ease;
+}
+
+.Project:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 90, 168, 0.7);
+}
+
+.Project:hover .projectContent {
+    top: 190px;
+    transition: top 550ms ease;
+}
+
+.projectArt {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.projectContent {
+    padding: 25px;
+    position: relative;
+    top: 394px;
+    background: linear-gradient(
+      180deg,
+      rgba(18, 14, 20, 0.0),
+      rgba(18, 14, 20, 0.6) 20%,
+      rgba(18, 14, 20, 0.85) 100%
+    );
+    backdrop-filter: blur(4px);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 8px; 
+    border-bottom-right-radius: 8px;
+    transition: top 550ms ease;
+    
+}
+
+.contentTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contentDescription {
+    margin-top: 30px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #e0dfe2;
+    opacity: 70%;
+    min-height: 100px;
+}

@@ -1,0 +1,64 @@
+import { projects } from "../../lib/data";
+import styles from "./Projects.module.css";
+
+export default function Projects() {
+  return (
+    <>
+      <section className={styles.projects} id="projects">
+        <div className={styles.projectsWrap}>
+            <div className={styles.projectTitle}>
+                <span className={styles.chevron}>{">"}</span>
+                <span>Project</span>
+            </div>
+
+            <div className={styles.projectContainer}>
+                <div className={styles.Project}>
+                    <div className={styles.projectArt} style={{ backgroundImage: `url(${projects[0].imageUrl})` }}>
+                        <div className={styles.projectContent}>
+                            <div className={styles.contentTitle}>
+                                <span>{projects[0].title}</span>
+                                <span>{"^"}</span>
+                            </div>
+                            <div className={styles.contentDescription}>
+                                 <span>{projects[0].description}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.Project}>
+                    <div className={styles.projectArt} style={{ backgroundImage: `url(${projects[0].imageUrl})` }}>
+                        <div className={styles.projectContent}>
+                            <div className={styles.contentTitle}>
+                                <span>{projects[1].title}</span>
+                                <span>{"^"}</span>
+                            </div>
+                            <div className={styles.contentDescription}>
+                                 <span>{projects[1].description}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={styles.Project}>
+                    <div className={styles.projectArt} style={{ backgroundImage: `url(${projects[0].imageUrl})` }}>
+                        <div className={styles.projectContent}>
+                            <div className={styles.contentTitle}>
+                                <span>{projects[2].title}</span>
+                                <span>{"^"}</span>
+                            </div>
+                            <div className={styles.contentDescription}>
+                                 <span>{projects[2].description}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+      </section>
+
+    </>
+  );
+}
