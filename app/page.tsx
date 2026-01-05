@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Hero from "../components/sections/Hero";
 import Projects from "../components/sections/Projects";
+import Techstack from "../components/sections/Techstack";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -17,6 +18,11 @@ export default function Home() {
         <section className={styles.snapSection} id="projects">
          <Projects />  
         </section>
+
+        <section className={styles.snapSection} id="tech">
+         <Techstack />  
+        </section>
+
       </div>
       
     </main>
