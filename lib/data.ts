@@ -27,7 +27,7 @@ export const heroLinks = [
   { label: "@github", href: "https://github.com" },
 ];
 
-//** PROJECTS SECTION */
+/** PROJECTS SECTION */
 export const projects = [
   {
     title: "Metasploitable",
@@ -49,3 +49,30 @@ export const projects = [
   },
 ];
 
+/** TECHSTACK SECTION */
+export const techstack = [
+  {
+    name: "Python", imageUrl: "/images/Python-logo-notext.svg.png", description: "Experienced in Python for scripting, automation, and data analysis."
+  },
+  {
+    name: "Java", imageUrl: "/icons/Java_programming_language_logo.svg", description: "Experienced in Java for scripting, automation, and data analysis."
+  },
+  {
+    name: "Next.js", imageUrl: "/images/nextjs-icon-dark-background.png", description: "Experienced in Next.js for building modern web applications."
+  },
+  {
+    name: "React", imageUrl: "/images/React-icon.svg.png", description: "Experienced in React for scripting, automation, and data analysis."
+  },
+  {
+    name: "Kali Linux", imageUrl: "/images/Kali-dragon-icon.svg.png", description: "Experienced in Kali Linux tools."
+  },
+  {
+    name: "Metasploit", imageUrl: "/images/metasploit-framework-logo.svg.png", description: "Experienced in Metasploit for penetration testing."
+  },
+  {
+    name: "Wireshark", imageUrl: "/images/wireshark-logo-big.CkRjSOaC_2eT4Ah.png", description: "Experienced in Wireshark for network analysis."
+  },
+  {
+    name: "Nmap", imageUrl: "/images/nmap.png", description: "Experienced in Nmap for network scanning."
+  }
+];
