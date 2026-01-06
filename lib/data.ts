@@ -76,3 +76,15 @@ export const techstack = [
     name: "Nmap", imageUrl: "/images/nmap.png", description: "Experienced in Nmap for network scanning."
   }
 ];
+
+/** EXPERIENCE SECTION */
+export const experience = [
+  {
+    role: "Web Development",
+    year: "2025 - Present",
+  },
+  {
+    role: "Capture The Flag (CTF) Competitor",
+    year: "2025 - Present",
+  }
+]

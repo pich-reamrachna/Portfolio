@@ -1,0 +1,56 @@
+
+.experienceWrap {
+  max-width: 900px;
+}
+
+.experienceTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: "IBM Plex Mono", "Space Mono", monospace;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.2rem;
+  user-select: none;
+}
+
+.experienceAllWrap {
+  display: flex;
+  margin-top: 2rem;
+  width: 100%;
+  gap: 1.5rem;
+}
+
+/* Techstack Stats Area (Right Side)*/
+.timelineContainer {
+  display: flex;
+  gap: 1.5rem;
+  background-color: aqua;
+  width: 30%
+}
+
+.yearBox {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  color: #fff;
+  font-family: "IBM Plex Mono", "Space Mono", monospace;
+  font-size: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Experience Content Area (Left Side)*/
+.experienceContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  /* padding: 2rem 1.2rem 1.5rem; */
+  background-color: rgba(236, 8, 8);
+  user-select: none;
+  gap:20px;
+  width: 70%;
+  height: 25rem;
+}
+
+
+
