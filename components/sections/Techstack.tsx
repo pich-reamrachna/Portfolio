@@ -14,7 +14,7 @@ export default function Techstack() {
             <div className={styles.techstackAllWrap}>
                 <div className={styles.techstackContainer}>
                     {techstack.map((tech) => (
-                        <div className={styles.techCard}>
+                        <div key={tech.name} className={styles.techCard}>
                             <div className={styles.techCardInner}>
                                 <div className={styles.techCardFront}>
                                     <div className={styles.techIcon}><img src={tech.imageUrl} /></div>
