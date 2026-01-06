@@ -38,8 +38,8 @@
 
 .terminalBody {
   font-family: "IBM Plex Mono", "Space Mono", monospace;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
   color: #f5eef6;
   min-height: 290px;
   max-height: 290px;
@@ -137,6 +137,19 @@
 .pillPrimary {
   background: rgba(24, 10, 20, 0.75);
   border-color: rgba(212, 90, 168, 0.55);
+}
+
+.pillPrimary:hover {
+  background-size: 60%;
+  background-position: center;
+    background-image:
+    linear-gradient(rgba(255, 0, 238, 0.60), rgba(0, 0, 0, 0.45)),
+    url("/images/colorful.gif");
+    background-blend-mode: overlay;
+      box-shadow:
+    0 0 12px rgba(212, 90, 168, 0.45),
+    0 0 28px rgba(212, 90, 168, 0.25);
+  
 }
 
 .pillArrow {

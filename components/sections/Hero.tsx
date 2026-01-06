@@ -8,15 +8,17 @@ const COMMANDS: Record<string, string[]> = {
   help: [
     "Available commands:",
     "- help: show this list",
-    "- about: short intro",
-    "- projects: project hint",
+    "- whois: short intro",
+    "- education: my educational background",
+    "- hobbies: my hobbies and interests",
     "- clear: clear the terminal",
   ],
-  about: [
+  whois: [
     "Hi, I'm Rachna.",
-    "I build thoughtful web experiences with clean UI and playful details.",
+    "I'm a cybersecurity students specializing in penetration testing and ethical hacking.",
+    "I love exploring the latest security vulnerabilities and learning new techniques to protect systems.",
+    "Feel free to explore my portfolio and reach out if you'd like to connect!",
   ],
-  projects: ["Check the Projects section below or type `open projects` soon."],
 };
 
 export default function Hero() {
@@ -45,12 +47,12 @@ export default function Hero() {
     }
 
     if (command === "clear") {
-      setOutput([]);
+      setOutput(terminalLines);
       return;
     }
 
     const response = COMMANDS[command] ?? [`Command not found: ${command}`];
-    setOutput((prev) => [...prev, `${prompt} ${raw}`, ...response]);
+    setOutput((prev) => [...prev, `${prompt} ${raw}`, ...response, ""]);
   };
 
   const handleSubmit = (event: React.KeyboardEvent<HTMLInputElement>) => {
@@ -81,7 +83,7 @@ export default function Hero() {
             <div className={styles.terminalBody} ref={terminalRef}>
               {output.map((line, index) => (
                 <p key={`${line}-${index}`} className={styles.terminalLine}>
-                  {line}
+                  {line === "" ? "\u00A0" : line}
                 </p>
               ))}
             </div>
