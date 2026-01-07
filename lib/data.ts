@@ -19,12 +19,12 @@ export const terminalLines = [
 ];
 
 export const heroLinks = [
-  { label: "Download CV", icon: "/icons/download-2-128.ico", isImage: true, href: "/cv.pdf" },
+  { label: "Download CV", icon: "/icons/download-2-128.ico", isImage: true, href: "/cv.pdf"},
   { label: "Contact me", href: "#contact" },
-  { label: "@facebook", href: "https://facebook.com" },
-  { label: "@instagram", href: "https://instagram.com" },
-  { label: "@linkedin", href: "https://linkedin.com" },
-  { label: "@github", href: "https://github.com" },
+  { label: "@facebook", icon: "/icons/facebook.svg", href: "https://facebook.com", isImage: true, iconSize: 1.9 },
+  { label: "@instagram", icon: "/icons/instagram.svg", href: "https://instagram.com", isImage: true, iconSize: 1.9 },
+  { label: "@linkedin", icon: "/icons/linkedin.svg", href: "https://linkedin.com", isImage: true, iconSize: 1.8 },
+  { label: "@github", icon: "/icons/github.svg", href: "https://github.com", isImage: true, iconSize: 2.1 },
 ];
 
 /** PROJECTS SECTION */

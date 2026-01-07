@@ -123,12 +123,14 @@ export default function Hero() {
           {heroLinks[1].label}
         </a>
         {heroLinks.slice(2).map((item) => (
-          <a key={item.label} className={styles.pill} href={item.href}>
+          <a key={item.icon} href={item.href}>
             {item.isImage ? (
-              <img src={item.icon} alt="" className={styles.pillIcon} aria-hidden="true" />
+              <img 
+              src={item.icon} 
+              alt="" className={styles.socialIcon} 
+              aria-hidden="true"
+              style={{ width: `${item.iconSize}rem`, height: `${item.iconSize}rem` }} />
             ) : null}
-            <span>{item.label}</span>
-            <span className={styles.pillArrow}>{">"}</span>
           </a>
         ))}
       </section>
