@@ -19,6 +19,7 @@
   font-size: 1.2rem;
   letter-spacing: 0.02em;
   margin-bottom: 0.75rem;
+  user-select: none;
 }
 
 .chevron {
@@ -48,6 +49,7 @@
   scrollbar-gutter: stable;
   scrollbar-width: thin;
   scrollbar-color: rgba(230, 118, 189, 0.7) rgba(12, 8, 14, 0.6);
+  user-select: none;
 }
 
 .terminalLine {
@@ -132,15 +134,16 @@
 }
 
 .socialIcon {
-  opacity: 80%;
+  opacity: 50%;
   user-select: none;
-  margin-left: 0.6rem;
+  margin-left: 0.5rem;
   transition: transform 160ms ease, border-color 160ms ease;
 }
 
 .socialIcon:hover {
   transform: translateY(-3px);
   border-color: rgba(212, 90, 168, 0.7);
+  opacity: 100%;
 }
 
 .pill:hover {
