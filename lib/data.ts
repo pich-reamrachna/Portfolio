@@ -21,29 +21,29 @@ export const terminalLines = [
 export const heroLinks = [
   { label: "Download CV", icon: "/icons/download-2-128.ico", isImage: true, href: "/cv.pdf"},
   { label: "Contact me", href: "#contact" },
-  { label: "@facebook", icon: "/icons/facebook.svg", href: "https://facebook.com", isImage: true, iconSize: 1.9 },
+  { label: "@facebook", icon: "/icons/facebook.svg", href: "https://www.facebook.com/CycomCyber", isImage: true, iconSize: 1.9 },
   { label: "@instagram", icon: "/icons/instagram.svg", href: "https://instagram.com", isImage: true, iconSize: 1.9 },
-  { label: "@linkedin", icon: "/icons/linkedin.svg", href: "https://linkedin.com", isImage: true, iconSize: 1.8 },
-  { label: "@github", icon: "/icons/github.svg", href: "https://github.com", isImage: true, iconSize: 2.1 },
+  { label: "@linkedin", icon: "/icons/linkedin.svg", href: "https://www.linkedin.com/in/ream-rachna-pich/", isImage: true, iconSize: 1.8 },
+  { label: "@github", icon: "/icons/github.svg", href: "https://github.com/pich-reamrachna", isImage: true, iconSize: 2.1 },
 ];
 
 /** PROJECTS SECTION */
 export const projects = [
   {
     title: "Metasploitable",
-    description: "This project focuses on utilizing Metasploit for penetration testing, aiming to identify and exploit vulnerabilities in systems. It provides a comprehensive framework for security assessments, helping organizations strengthen their defenses against potential cyber threats.",
+    description: "This project focuses on utilizing Metasploit for penetration testing, aiming to identify and exploit vulnerabilities in systems.",
     imageUrl: "/images/splash.png",
     projectUrl: "",
   },
   {
     title: "Honeypot",
-    description: "This project focuses on utilizing Metasploit for penetration testing, aiming to identify and exploit vulnerabilities in systems. It provides a comprehensive framework for security assessments, helping organizations strengthen their defenses against potential cyber threats.",
+    description: "This project aims to strengthen organizations application security through capturing and analyzing their attackers' behaviour and purpose.",
     imageUrl: "/images/splash.png",
     projectUrl: "",
   },
   {
-    title: "Project Three",
-    description: "This project focuses on utilizing Metasploit for penetration testing, aiming to identify and exploit vulnerabilities in systems. It provides a comprehensive framework for security assessments, helping organizations strengthen their defenses against potential cyber threats.",
+    title: "Human-Pose Follower Robot",
+    description: "Self-gathered datasets in order to train a model using YOLOV8 Pose Classification model. Utilized that model to control a Robot action based on Human Pose.",
     imageUrl: "/images/splash.png",
     projectUrl: "",
   },
@@ -52,25 +52,25 @@ export const projects = [
 /** TECHSTACK SECTION */
 export const techstack = [
   {
-    name: "Python", imageUrl: "/images/Python-logo-notext.svg.png", description: "Experienced in Python for scripting, automation, and data analysis."
+    name: "Python", imageUrl: "/images/Python-logo-notext.svg.png", description: "Utilized Python to mobilize Robots."
   },
   {
-    name: "Java", imageUrl: "/icons/Java_programming_language_logo.svg", description: "Experienced in Java for scripting, automation, and data analysis."
+    name: "Java", imageUrl: "/icons/Java_programming_language_logo.svg", description: "Utilized Java to create a simple terminal chat application."
   },
   {
-    name: "Next.js", imageUrl: "/images/nextjs-icon-dark-background.png", description: "Experienced in Next.js for building modern web applications."
+    name: "Next.js", imageUrl: "/images/nextjs-icon-dark-background.png", description: "Utilized Next.js Framework in creating this portfolio."
   },
   {
-    name: "React", imageUrl: "/images/React-icon.svg.png", description: "Experienced in React for scripting, automation, and data analysis."
+    name: "HTML", imageUrl: "/images/React-icon.svg.png", description: "Utilized Basic HTML for web development."
   },
   {
-    name: "Kali Linux", imageUrl: "/images/Kali-dragon-icon.svg.png", description: "Experienced in Kali Linux tools."
+    name: "Kali Linux", imageUrl: "/images/Kali-dragon-icon.svg.png", description: "Utilized Kali Linux for cybersecurity tools"
   },
   {
-    name: "Metasploit", imageUrl: "/images/metasploit-framework-logo.svg.png", description: "Experienced in Metasploit for penetration testing."
+    name: "Metasploit", imageUrl: "/images/metasploit-framework-logo.svg.png", description: "Experienced in Metasploit for penetration testing on vulnerable machines."
   },
   {
-    name: "Wireshark", imageUrl: "/images/wireshark-logo-big.CkRjSOaC_2eT4Ah.png", description: "Experienced in Wireshark for network analysis."
+    name: "Wireshark", imageUrl: "/images/wireshark-logo-big.CkRjSOaC_2eT4Ah.png", description: "Basic Wireshark packet analysis."
   },
   {
     name: "Nmap", imageUrl: "/images/nmap.png", description: "Experienced in Nmap for network scanning."
@@ -85,6 +85,6 @@ export const experience = [
   },
   {
     role: "Capture The Flag (CTF) Competitor",
-    year: "2025 - Present",
+    year: "2025",
   }
 ]
