@@ -27,7 +27,7 @@ export default function Projects() {
                 </div>
 
                 <div className={styles.Project}>
-                    <div className={styles.projectArt} style={{ backgroundImage: `url(${projects[0].imageUrl})` }}>
+                    <div className={styles.projectArt} style={{ backgroundImage: `url(${projects[1].imageUrl})` }}>
                         <div className={styles.projectContent}>
                             <div className={styles.contentTitle}>
                                 <span>{projects[1].title}</span>
@@ -41,7 +41,7 @@ export default function Projects() {
                 </div>
 
                 <div className={styles.Project}>
-                    <div className={styles.projectArt} style={{ backgroundImage: `url(${projects[0].imageUrl})` }}>
+                    <div className={styles.projectArt} style={{ backgroundImage: `url(${projects[2].imageUrl})` }}>
                         <div className={styles.projectContent}>
                             <div className={styles.contentTitle}>
                                 <span>{projects[2].title}</span>

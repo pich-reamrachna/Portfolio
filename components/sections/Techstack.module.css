@@ -24,18 +24,22 @@
 .techstackStats {
   display: flex;
   gap: 1.5rem;
-  background-color: aqua;
-  width: 30%
+  border-radius: 0.7rem;
+  border-width: 1rem;
+  border-color: red;
+  border: 2px solid rgba(102, 40, 79, 0.7);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  width: 30%;
+  background:rgba(223, 86, 194, 0.119);
 }
 
 .statsBox {
-  background-color: rgba(255, 255, 255, 0.1);
+  /* background-color: rgba(255, 255, 255, 0.1); */
   border-radius: 8px;
   padding: 20px;
   color: #fff;
   font-family: "IBM Plex Mono", "Space Mono", monospace;
   font-size: 1rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
 /* Techstack Content Area (Left Side)*/

@@ -28,7 +28,7 @@ export default function Techstack() {
 
                 <div className={styles.techstackStats}>
                     <div className={styles.statsBox}>
-                        box
+                        Skills Overview
                     </div>
                 </div>
             </div>

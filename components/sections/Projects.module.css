@@ -83,6 +83,7 @@
     border-bottom-left-radius: 8px; 
     border-bottom-right-radius: 8px;
     transition: top 550ms ease;
+    height:100%;
     
 }
 
