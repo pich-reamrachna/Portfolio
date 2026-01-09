@@ -25,8 +25,11 @@
 .timelineContainer {
   display: flex;
   gap: 1.5rem;
-  background-color: aqua;
-  width: 30%
+  width: 50%;
+  border: 2px solid rgba(102, 40, 79, 0.7);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  user-select: none;
+  border-radius: 0.7rem;
 }
 
 .yearBox {
@@ -37,19 +40,39 @@
   font-family: "IBM Plex Mono", "Space Mono", monospace;
   font-size: 1rem;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  user-select: none;
 }
 
 /* Experience Content Area (Left Side)*/
 .experienceContainer {
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex-row;
+  flex-wrap: wrap; */
   align-content: start;
   /* padding: 2rem 1.2rem 1.5rem; */
-  background-color: rgba(236, 8, 8);
   user-select: none;
   gap:20px;
   width: 70%;
   height: 25rem;
+}
+
+.experiencePanel {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  color: #fff;
+  font-family: "IBM Plex Mono", "Space Mono", monospace;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.experiencePanel:hover{
+  background-color: rgba(141, 229, 245, 0.2);
+  cursor: pointer;
+  transform: translateX(3px);
 }
 
 
