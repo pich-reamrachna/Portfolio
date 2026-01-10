@@ -61,7 +61,7 @@ export const techstack = [
     name: "Next.js", imageUrl: "/images/nextjs-icon-dark-background.png", description: "Utilized Next.js Framework in creating this portfolio."
   },
   {
-    name: "HTML", imageUrl: "/images/React-icon.svg.png", description: "Utilized Basic HTML for web development."
+    name: "HTML/CSS", imageUrl: "/images/html5-css3-hd-removebg-preview.png", description: "Utilized Basic HTML & CSS for web development."
   },
   {
     name: "Kali Linux", imageUrl: "/images/Kali-dragon-icon.svg.png", description: "Utilized Kali Linux for cybersecurity tools"
