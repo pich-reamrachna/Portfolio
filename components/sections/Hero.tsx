@@ -132,7 +132,7 @@ export default function Hero() {
           {heroLinks[0].isImage ? (
             <img
               src={heroLinks[0].icon}
-              alt=""
+              alt="download-icon"
               className={styles.pillIcon}
               aria-hidden="true"
             />
@@ -146,7 +146,7 @@ export default function Hero() {
             {item.isImage ? (
               <img 
               src={item.icon} 
-              alt="" className={styles.socialIcon} 
+              alt="social-icon" className={styles.socialIcon} 
               aria-hidden="true"
               style={{ width: `${item.iconSize}rem`, height: `${item.iconSize}rem` }} />
             ) : null}

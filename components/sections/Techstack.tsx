@@ -17,7 +17,7 @@ export default function Techstack() {
                         <div key={tech.name} className={styles.techCard}>
                             <div className={styles.techCardInner}>
                                 <div className={styles.techCardFront}>
-                                    <div className={styles.techIcon}><img src={tech.imageUrl} /></div>
+                                    <div className={styles.techIcon}><img src={tech.imageUrl} alt="tech-icon"/></div>
                                     <div className={styles.techName}>{tech.name}</div>
                                 </div>
                                 <div className={styles.techCardBack}>{tech.description}</div>
