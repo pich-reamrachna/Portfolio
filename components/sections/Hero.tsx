@@ -9,16 +9,35 @@ const COMMANDS: Record<string, string[]> = {
     "Available commands:",
     "- help: show this list",
     "- whois: short intro",
+    "- whoami: who you are",
     "- education: my educational background",
     "- hobbies: my hobbies and interests",
+    "- contact: my contact info",
     "- clear: clear the terminal",
   ],
   whois: [
     "Hi, I'm Rachna.",
-    "I'm a cybersecurity students specializing in penetration testing and ethical hacking.",
-    "I love exploring the latest security vulnerabilities and learning new techniques to protect systems.",
+    "I’m a second-year cybersecurity student at American University of Phnom Penh",
+    "I’m also part of CYCOM, a community where we share knowledge about cyber hygiene and run awareness workshops across Cambodia.",
+    "Right now, I’m exploring ethical hacking and network analysis tools, and I’m constantly working to deepen my understanding of cybersecurity as a whole.",
     "Feel free to explore my portfolio and reach out if you'd like to connect!",
   ],
+
+  education: [
+    "I graduated from Western International School in 2023 and is currently majoring in Cybersecurity at American University of Phnom Penh."
+  ],
+
+  hobbies: [
+    "I love to spend my free time reading novels and engrossing myself in other cultures through foreign media."
+  ],
+
+  contact: [
+    "you can contact me through the social media I've linked below or through my email: ream.rachna.buss@gmail.com"
+  ],
+
+  whoami: [
+    "You are an individual I want to work with, hmu :) contacts below"
+  ]
 };
 
 export default function Hero() {
