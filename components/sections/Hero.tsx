@@ -153,7 +153,7 @@ export default function Hero() {
           {t(heroLinks[1].label)}
         </a>
         {heroLinks.slice(2).map((item) => (
-          <a key={item.icon} href={item.href}>
+          <a key={item.icon} href={item.href} aria-label={item.label}>
             {item.isImage ? (
               <img 
               src={item.icon} 
