@@ -2,46 +2,50 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { heroLinks, terminalLines } from "../../lib/data";
+import { useLang } from "../../lib/useLang";
 import styles from "./Hero.module.css";
 
-const COMMANDS: Record<string, string[]> = {
+const COMMAND_KEYS: Record<string, string[]> = {
   help: [
-    "Available commands:",
-    "- help: show this list",
-    "- whois: short intro",
-    "- whoami: who you are",
-    "- education: my educational background",
-    "- hobbies: my hobbies and interests",
-    "- contact: my contact info",
-    "- clear: clear the terminal",
+    "terminal.command.help.0",
+    "terminal.command.help.1",
+    "terminal.command.help.2",
+    "terminal.command.help.3",
+    "terminal.command.help.4",
+    "terminal.command.help.5",
+    "terminal.command.help.6",
+    "terminal.command.help.7",
   ],
   whois: [
-    "Hi, I'm Rachna.",
-    "I’m a second-year cybersecurity student at American University of Phnom Penh",
-    "I’m also part of CYCOM, a community where we share knowledge about cyber hygiene and run awareness workshops across Cambodia.",
-    "Right now, I’m exploring ethical hacking and network analysis tools, and I’m constantly working to deepen my understanding of cybersecurity as a whole.",
-    "Feel free to explore my portfolio and reach out if you'd like to connect!",
+    "terminal.command.whois.0",
+    "terminal.command.whois.1",
+    "terminal.command.whois.2",
+    "terminal.command.whois.3",
+    "terminal.command.whois.4",
   ],
 
   education: [
-    "I graduated from Western International School in 2023 and is currently majoring in Cybersecurity at American University of Phnom Penh."
+    "terminal.command.education.0",
   ],
 
   hobbies: [
-    "I love to spend my free time reading novels and engrossing myself in other cultures through foreign media."
+    "terminal.command.hobbies.0",
   ],
 
   contact: [
-    "you can contact me through the social media I've linked below or through my email: ream.rachna.buss@gmail.com"
+    "terminal.command.contact.0",
   ],
 
   whoami: [
-    "You are an individual I want to work with, hmu :) contacts below"
+    "terminal.command.whoami.0",
   ]
 };
 
 export default function Hero() {
-  const [output, setOutput] = useState<string[]>(terminalLines);
+  const { lang, t } = useLang("en");
+  const [output, setOutput] = useState<string[]>(
+    terminalLines.map((line) => (line === "---" ? line : t(line)))
+  );
   const [input, setInput] = useState("");
   const terminalRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
@@ -51,6 +55,9 @@ export default function Hero() {
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
+  useEffect(() => {
+    setOutput(terminalLines.map((line) => (line === "---" ? line : t(line))));
+  }, [lang, t]);
 
   useEffect(() => {
     terminalRef.current?.scrollTo({
@@ -66,11 +73,15 @@ export default function Hero() {
     }
 
     if (command === "clear") {
-      setOutput(terminalLines);
+      setOutput(terminalLines.map((line) => (line === "---" ? line : t(line))));
       return;
     }
 
-    const response = COMMANDS[command] ?? [`Command not found: ${command}`];
+    const responseKeys = COMMAND_KEYS[command];
+    const response = responseKeys
+      ? responseKeys.map((key) => t(key))
+      : [t("terminal.commandNotFound").replace("{command}", command)];
+
     setOutput((prev) => [...prev, `${prompt} ${raw}`, ...response, ""]);
   };
 
@@ -91,7 +102,7 @@ export default function Hero() {
         <div className={styles.terminalWrap}>
           <div className={styles.terminalTitle}>
             <span className={styles.chevron}>{">"}</span>
-            <span>Terminal</span>
+            <span>{t("hero.terminalTitle")}</span>
           </div>
 
           <div
@@ -128,7 +139,7 @@ export default function Hero() {
 
       <section className={styles.heroLinks}>
         <a className={`${styles.pill} ${styles.pillPrimary}`} href={heroLinks[0].href}>
-          {heroLinks[0].label}
+          {t(heroLinks[0].label)}
           {heroLinks[0].isImage ? (
             <img
               src={heroLinks[0].icon}
@@ -139,7 +150,7 @@ export default function Hero() {
           ) : null}
         </a>
         <a className={`${styles.pill} ${styles.pillPrimary}`} href={heroLinks[1].href}>
-          {heroLinks[1].label}
+          {t(heroLinks[1].label)}
         </a>
         {heroLinks.slice(2).map((item) => (
           <a key={item.icon} href={item.href}>
@@ -156,3 +167,4 @@ export default function Hero() {
     </>
   );
 }
+

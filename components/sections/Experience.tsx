@@ -1,14 +1,18 @@
+"use client";
+
 import { experience } from "../../lib/data";
+import { useLang } from "../../lib/useLang";
 import styles from "./Experience.module.css";
 
 export default function Experience() {
+    const { t } = useLang("en");
   return (
     <>
-      <section className={styles.experience} id="techstack">
+      <section className={styles.experience} id="experience">
         <div className={styles.experienceWrap}>
             <div className={styles.experienceTitle}>
                 <span className={styles.chevron}>{">"}</span>
-                <span>Experience</span>
+                <span>{t("experience.title")}</span>
             </div>
 
             <div className={styles.experienceAllWrap}>
@@ -17,7 +21,7 @@ export default function Experience() {
                       <div key={exp.role} className={styles.experiencePanel}>
                         <div className={styles.timelineTitle}>
                           <div className={styles.label}>{exp.year}</div>
-                          <div className={styles.role}>{exp.role}</div>
+                          <div className={styles.role}>{t(exp.role)}</div>
                         </div>
                         <span>{'>'}</span>
                       </div>

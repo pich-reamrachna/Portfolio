@@ -1,14 +1,18 @@
+"use client";
+
 import { techstack } from "../../lib/data";
+import { useLang } from "../../lib/useLang";
 import styles from "./Techstack.module.css";
 
 export default function Techstack() {
+    const { t } = useLang("en");
   return (
     <>
       <section className={styles.techstack} id="techstack">
         <div className={styles.techstackWrap}>
             <div className={styles.techstackTitle}>
                 <span className={styles.chevron}>{">"}</span>
-                <span>Techstack</span>
+                <span>{t("techstack.title")}</span>
             </div>
 
             <div className={styles.techstackAllWrap}>
@@ -20,7 +24,7 @@ export default function Techstack() {
                                     <div className={styles.techIcon}><img src={tech.imageUrl} alt="tech-icon"/></div>
                                     <div className={styles.techName}>{tech.name}</div>
                                 </div>
-                                <div className={styles.techCardBack}>{tech.description}</div>
+                                <div className={styles.techCardBack}>{t(tech.description)}</div>
                             </div>
                         </div>
                     ))}
