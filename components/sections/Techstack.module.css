@@ -7,7 +7,6 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
-  font-family: "IBM Plex Mono", "Space Mono", monospace;
   font-size: 1.2rem;
   letter-spacing: 0.02em;
   margin-bottom: 1.2rem;
@@ -38,7 +37,6 @@
   border-radius: 8px;
   padding: 20px;
   color: #fff;
-  font-family: "IBM Plex Mono", "Space Mono", monospace;
   font-size: 1rem;
 }
 
@@ -61,7 +59,6 @@
   /* border-radius: 8px; */
   /* padding: 20px; */
   color: #fff;
-  font-family: "IBM Plex Mono", "Space Mono", monospace;
   font-size: 1rem;
   /* box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35); */
   font-size: 0.95rem;
@@ -69,6 +66,7 @@
   width: 8.5rem;
   perspective: 1000px;
   background-color: transparent;
+  
 }
 
 .techCardInner {
@@ -114,8 +112,8 @@
 }
 
 .techName {
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 0.9rem;
+    font-weight: 400;
 }
 
 .techCardBack {

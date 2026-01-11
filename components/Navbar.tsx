@@ -93,8 +93,8 @@ export default function Navbar() {
           href={item.href}
           aria-current={activeId === item.href ? "true" : undefined} //aria-current is set to true so CSS can style the active link
           onClick={() => setActiveId(item.href)}
-          aria-label={t(item.label)}
-          title={t(item.label)}
+          aria-label={item.label}
+          title={item.label}
         >
           {item.isImage ? (
             <img src={item.icon} alt={item.label} className={styles.sideIconImage} />
