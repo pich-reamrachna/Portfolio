@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { avatar, sideLinks } from "../lib/data";
+import { useLang } from "../lib/useLang";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
+  const { lang, toggleLang, t } = useLang("en");
   const [activeId, setActiveId] = useState<string | null>(null);
   const navLinks = [...avatar, ...sideLinks];
 
@@ -90,6 +92,8 @@ export default function Navbar() {
           href={item.href}
           aria-current={activeId === item.href ? "true" : undefined} //aria-current is set to true so CSS can style the active link
           onClick={() => setActiveId(item.href)}
+          aria-label={t(item.label)}
+          title={t(item.label)}
         >
           {item.isImage ? (
             <img src={item.icon} alt={item.label} className={styles.sideIconImage} />
@@ -98,6 +102,15 @@ export default function Navbar() {
           )}
         </a>
       ))}
+
+      <button
+        type="button"
+        className={styles.langToggle}
+        onClick={toggleLang}
+        aria-label="Toggle language"
+      >
+        {lang === "en" ? "EN" : "JP"}
+      </button>
     </nav>
   );
 }
