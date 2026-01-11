@@ -13,14 +13,14 @@ export const sideLinks = [
 
 /** HERO SECTION */
 export const terminalLines = [
-  "Welcome to Rachna's Portfolio",
+  "terminal.welcome",
   "---",
-  "For a list of available commands, type `help`",
+  "terminal.help",
 ];
 
 export const heroLinks = [
-  { label: "Download CV", icon: "/icons/download-2-128.ico", isImage: true, href: "/cv.pdf"},
-  { label: "Contact me", href: "#contact" },
+  { label: "hero.downloadCV", icon: "/icons/download-2-128.ico", isImage: true, href: "/cv.pdf"},
+  { label: "hero.contactMe", href: "#contact" },
   { label: "@facebook", icon: "/icons/facebook.svg", href: "https://www.facebook.com/CycomCyber", isImage: true, iconSize: 1.9 },
   { label: "@instagram", icon: "/icons/instagram.svg", href: "https://instagram.com", isImage: true, iconSize: 1.9 },
   { label: "@linkedin", icon: "/icons/linkedin.svg", href: "https://www.linkedin.com/in/ream-rachna-pich/", isImage: true, iconSize: 1.8 },
@@ -30,20 +30,20 @@ export const heroLinks = [
 /** PROJECTS SECTION */
 export const projects = [
   {
-    title: "Metasploitable",
-    description: "This project focuses on utilizing Metasploit for penetration testing, aiming to identify and exploit vulnerabilities in systems.",
+    title: "projects.item1.title",
+    description: "projects.item1.desc",
     imageUrl: "/images/splash.png",
     projectUrl: "",
   },
   {
-    title: "Honeypot",
-    description: "This project aims to strengthen organizations application security through capturing and analyzing their attackers' behaviour and purpose.",
+    title: "projects.item2.title",
+    description: "projects.item2.desc",
     imageUrl: "/images/splash.png",
     projectUrl: "",
   },
   {
-    title: "Human-Pose Follower Robot",
-    description: "Self-gathered datasets in order to train a model using YOLOV8 Pose Classification model. Utilized that model to control a Robot action based on Human Pose.",
+    title: "projects.item3.title",
+    description: "projects.item3.desc",
     imageUrl: "/images/splash.png",
     projectUrl: "",
   },
@@ -52,39 +52,39 @@ export const projects = [
 /** TECHSTACK SECTION */
 export const techstack = [
   {
-    name: "Python", imageUrl: "/images/Python-logo-notext.svg.png", description: "Utilized Python to mobilize Robots."
+    name: "Python", imageUrl: "/images/Python-logo-notext.svg.png", description: "tech.python.desc"
   },
   {
-    name: "Java", imageUrl: "/icons/Java_programming_language_logo.svg", description: "Utilized Java to create a simple terminal chat application."
+    name: "Java", imageUrl: "/icons/Java_programming_language_logo.svg", description: "tech.java.desc"
   },
   {
-    name: "Next.js", imageUrl: "/images/nextjs-icon-dark-background.png", description: "Utilized Next.js Framework in creating this portfolio."
+    name: "Next.js", imageUrl: "/images/nextjs-icon-dark-background.png", description: "tech.next.desc"
   },
   {
-    name: "HTML/CSS", imageUrl: "/images/html5-css3-hd-removebg-preview.png", description: "Utilized Basic HTML & CSS for web development."
+    name: "HTML/CSS", imageUrl: "/images/html5-css3-hd-removebg-preview.png", description: "tech.htmlAndCSS.desc"
   },
   {
-    name: "Kali Linux", imageUrl: "/images/Kali-dragon-icon.svg.png", description: "Utilized Kali Linux for cybersecurity tools"
+    name: "Kali Linux", imageUrl: "/images/Kali-dragon-icon.svg.png", description: "tech.kali.desc"
   },
   {
-    name: "Metasploit", imageUrl: "/images/metasploit-framework-logo.svg.png", description: "Experienced in Metasploit for penetration testing on vulnerable machines."
+    name: "Metasploit", imageUrl: "/images/metasploit-framework-logo.svg.png", description: "tech.metasploit.desc"
   },
   {
-    name: "Wireshark", imageUrl: "/images/wireshark-logo-big.CkRjSOaC_2eT4Ah.png", description: "Basic Wireshark packet analysis."
+    name: "Wireshark", imageUrl: "/images/wireshark-logo-big.CkRjSOaC_2eT4Ah.png", description: "tech.wireshark.desc"
   },
   {
-    name: "Nmap", imageUrl: "/images/nmap.png", description: "Experienced in Nmap for network scanning."
+    name: "Nmap", imageUrl: "/images/nmap.png", description: "tech.nmap.desc"
   }
 ];
 
 /** EXPERIENCE SECTION */
 export const experience = [
   {
-    role: "Web Development",
+    role: "experience.item1.role",
     year: "2025 - Present",
   },
   {
-    role: "Capture The Flag (CTF) Competitor",
+    role: "experience.item2.role",
     year: "2025",
   }
 ]
