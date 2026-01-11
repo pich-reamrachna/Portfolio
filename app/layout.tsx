@@ -1,4 +1,17 @@
 import "./globals.css";
+import { IBM_Plex_Mono, Space_Mono } from "next/font/google";
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-ibm-plex-mono",
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-space-mono",
+});
 
 export const metadata = {
   metadataBase: new URL("https://portfolio-eight-ochre-uwuzusri1a.vercel.app"),
@@ -18,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${ibmPlexMono.variable} ${spaceMono.variable}`}>
       <body>{children}</body>
     </html>
   );

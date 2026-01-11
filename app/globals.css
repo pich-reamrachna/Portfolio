@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  font-family: "Space Grotesk", "IBM Plex Sans", sans-serif;
+  font-family: var(--font-ibm-plex-mono), var(--font-space-mono), monospace;
   background: #0b0408;
   color: #f3eff0;
 }
